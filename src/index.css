@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #153b2a;
+  background: #f3efe4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, a, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+
+@layer utilities {
+  .bg-sand { background-color: #f3efe4; }
+  .bg-cream { background-color: #faf8f1; }
+  .bg-forest { background-color: #0e3524; }
+  .text-forest { color: #153b2a; }
+  .text-mist { color: #c8d4c6; }
+  .text-olive { color: #617263; }
+  .bg-lime { background-color: #c4e86b; }
+  .text-lime { color: #c4e86b; }
+  .border-lime { border-color: #c4e86b; }
+  .font-display { font-family: 'Playfair Display', serif; }
+}
+
+.eyebrow { font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #718370; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5vw, 4.6rem); line-height: 1.02; letter-spacing: -.04em; }
+.section-title em { color: #7a9a3e; font-style: italic; }
+.footer-label { color: #c4e86b; font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.social { display: inline-flex; align-items: center; gap: .45rem; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: .6rem .8rem; color: #c8d4c6; font-size: .8rem; transition: .2s ease; }
+.social:hover { border-color: #c4e86b; color: #c4e86b; }
+.field { display: grid; gap: .5rem; color: #617263; font-size: .78rem; font-weight: 700; }
+.field input, .field textarea, .field select { width: 100%; border: 1px solid rgba(21,59,42,.15); border-radius: .9rem; background: #faf8f1; padding: .9rem 1rem; color: #153b2a; outline: none; transition: border .2s, box-shadow .2s; }
+.field textarea { resize: vertical; }
+.field input:focus, .field textarea:focus, .field select:focus { border-color: #7a9a3e; box-shadow: 0 0 0 4px rgba(196,232,107,.3); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-title { animation: rise .7s ease both; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
